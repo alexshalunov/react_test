@@ -19,3 +19,13 @@ tr.BidItem{
         cursor: pointer;
     }
 }
+
+.star{
+    font-size: 2rem;
+    &.gold{
+        color: gold;
+    }
+    &.black{
+        color:black;
+    }
+}
