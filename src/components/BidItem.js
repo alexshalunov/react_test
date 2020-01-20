@@ -3,12 +3,12 @@ import './BidItem.scss';
 
 const BidItem = props => {
 
-    console.log(props)
+    // console.log(props)
 
     return(
         <tr className="BidItem">
             <td>1</td>                                    
-            <td>{props.bid.number}</td>
+            <td>{props.bid.id}</td>
             <td>30.12.19 - 01.12.20</td>
             <td>
                 {(props.bid.status)? 'Завершен': 'Открыт'}
@@ -16,14 +16,14 @@ const BidItem = props => {
             <td>Иваново - Вичуга</td>
             <td>6</td>
             <td>
-                {props.bid.owner}
+                {props.bid.company}
             </td>
             <td>{props.bid.cost}₽</td>    
             <td>
                 {props.bid.status ? (
                     <button className="goBtn">Поехали</button>
                 ) : (
-                    <button onClick={() => props.onBidClick(props.bid.number)} className="goBtn">Поставить</button>
+                    <button onClick={() => props.onBidClick(props.bid.id)} className="goBtn">Поставить</button>
                 )}
                 
                 
