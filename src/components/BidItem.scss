@@ -1,0 +1,21 @@
+tr.BidItem{    
+    td{
+        padding: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        border-bottom: 1px solid #D9DFE5;
+    }
+    &:hover{
+        td{
+            background: #FFF4CC;
+        }
+    }    
+    .goBtn{
+        border: 1px solid #0B9C4C;
+        background: #fff;
+        color: #0B9C4C;
+        text-align: center;
+        cursor: pointer;
+    }
+}

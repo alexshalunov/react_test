@@ -1,0 +1,25 @@
+.table_grid{
+    display:grid;
+    min-width: 100%;
+    grid-template-columns: minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr);
+    thead, tbody, tr{
+      display: contents;
+    }
+    tr{
+      th{
+        padding: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        border-bottom: 1px solid #D9DFE5;
+        position: sticky;
+        top: 0;
+        background: #fff;
+        text-align: left;
+        font-weight: normal;
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+    }
+  }
+  
