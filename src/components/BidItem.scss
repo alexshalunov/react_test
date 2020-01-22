@@ -141,7 +141,7 @@ tr.BidItem{
             grid-template-rows: 1fr;
             justify-content: space-between;
             grid-template-areas: "price step btn";
-            grid-column-gap: 0;
+            // grid-column-gap: 5px;
             >*{
                 align-self:center;
             }              
@@ -156,16 +156,46 @@ tr.BidItem{
             }
             .goCol-btn{
                 grid-area: btn;
-                // grid-column-gap: 5px;
+                // padding: 0 10px;
+                div{
+                    font-style: italic;
+                    font-size: 12px;
+                    width: 100%;
+                    text-align: center;
+                    line-height: 30px;
+                    position: relative;
+                    &:before{
+                        content: '';
+                        width: 9px;
+                        height: 17px;
+                        background: url(../img/win-r.png) center center no-repeat;
+                        background-size: 9px 17px;
+                        display: inline-block;
+                        position: relative;
+                        top: 3px;
+                        left: -5px;
+                    }
+                    &:after{
+                        content: '';                        
+                        width: 9px;
+                        height: 17px;
+                        background: url(../img/win-l.png) center center no-repeat;
+                        background-size: 9px 17px;
+                        display: inline-block;
+                        position: relative;
+                        top: 3px;
+                        right: -5px;
+                    }
+                }
             }
         }
 
     }
-    &:hover{
+    &:hover, &.win{
         td{
             background: #FFF4CC;
         }
-    }    
+    }
     .goBtn{
         border: 1px solid #0B9C4C;
         background: #fff;

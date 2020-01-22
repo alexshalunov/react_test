@@ -12,8 +12,9 @@ const BidItem = props => {
     
     const p = 90000
 
+    const clstr = (props.bid.status && props.bid.isWin) ? 'BidItem win':'BidItem'
     return(
-        <tr className="BidItem">
+        <tr className={clstr}>
             <td>
                 {/* <div className="star"></div> */}
 
@@ -70,7 +71,15 @@ const BidItem = props => {
             </td>    
             <td className="goCol">
                 {props.bid.status ? (
-                    <div className="goCol-btn"><button className="goBtn">Поехали</button></div>
+
+                    props.bid.isWin ? (
+                        <div className="goCol-btn">
+                            <div>Ваша ставка лучшая</div>
+                        </div>                        
+                    ):(
+                        <div className="goCol-btn"><button className="goBtn">Поехали</button></div>
+                    )
+                        
                 ) : (
                     <>
                         <div className="goCol-price"><Price price = {p} /></div>
