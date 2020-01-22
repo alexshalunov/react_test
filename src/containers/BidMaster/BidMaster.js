@@ -8,6 +8,7 @@ class BidMaster extends Component{
     constructor() {
         super()
         this.state = {
+            filter: 1,
             loading: false,
             bids: [] 
         }
@@ -20,7 +21,7 @@ class BidMaster extends Component{
 
     componentDidMount() {
         this.setState({loading: true})
-        fetch("http://www.filltext.com/?rows=100&id={number|9999}&dateStart={date|10-10-2019,12-31-2019}&dateEnd={date|01-01-2020,02-29-2020}&isFavourite={bool}&status={bool}&typeTs=[1,2,3]&cityStart={city}&cityEnd={city}&company={business}&cost={numberLength|6}}&step={numberLength|3}}")
+        fetch("http://www.filltext.com/?rows=100&id={number|9999}&dateStart={date|10-10-2019,12-31-2019}&dateEnd={date|01-01-2020,02-29-2020}&hasHint={bool}&isFavourite={bool}&status={bool}&typeTs=[1,2,3]&cityStart={city}&cityEnd={city}&company={business}&cost={numberLength|6}}&step={numberLength|3}}")
             .then(response => response.json())
             .then(data => {
                 this.setState({
@@ -37,7 +38,13 @@ class BidMaster extends Component{
         return(
             <div className="gridcontainer">
                 <div className="gridtitle">Доступные торги</div>
-                <div className="gridfilter">Фильтры</div>
+                <div className="gridfilter">
+                    <ul className="filters">
+                        <li><button>Все</button></li>
+                        <li><button>Избранные</button></li>
+                        <li><button>Участие</button></li>
+                    </ul>
+                </div>
                 <div className="gridcontent">
                     <div className="wrap">
                         {(this.state.loading)? 'Loading':

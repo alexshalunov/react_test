@@ -26,7 +26,14 @@
         grid-auto-rows: 0; /* Фича для вертикального скролла внутри грид auto */
         overflow-y: scroll;
     }    
-  }
+
+    .filters{
+        float: right;
+        li{
+            float: left;
+        }
+    }
+}
 
 
 
