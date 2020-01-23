@@ -2,7 +2,7 @@ $c-gray: #8F949B;
 
 tr.BidItem{    
     >td{
-        padding: 0 15px;
+        padding: 0 10px 0 15px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -15,7 +15,9 @@ tr.BidItem{
         flex-direction: column;
         justify-content: center;
 
-        // grid-row-gap: 20px;
+        &:last-child{
+            padding-right: 15px;
+        }
 
         .dateTime{
             display: grid;
@@ -110,6 +112,7 @@ tr.BidItem{
             }
         }
         &.colPrice{
+            padding-right: 15px;
             display: grid;
             grid-template-columns: auto auto;
             grid-template-rows: 1fr;
@@ -206,7 +209,11 @@ tr.BidItem{
                 }
             }
         }
-
+        .ellipses{
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;            
+        }
     }
     &:hover, &.win{
         td{

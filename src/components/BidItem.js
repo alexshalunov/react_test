@@ -36,7 +36,9 @@ const BidItem = props => {
                 </div>
             </td>
             <td className="bidStatus">
-                {(props.bid.status)? 'Завершен': 'Открыт'}
+                <span className="ellipses">
+                    {(props.bid.status)? 'Завершен': 'Открыт'}
+                </span>
             </td>
             <td className="bidWay">
                     <div className="wayStart">{props.bid.cityStart}</div>
@@ -61,15 +63,19 @@ const BidItem = props => {
                 </div>
             </td>
             <td>
-                {props.bid.company}
+                <span className="ellipses">
+                    {props.bid.company}
+                </span>
             </td>
             <td className="colPrice">
                 <div className="price_cost">
                     <Price price={props.bid.cost}/>
                 </div>
-                <div className="fireIco">
-                    <Fire/>
-                </div>
+                {(props.bid.cost < 500000)?(
+                    <div className="fireIco">
+                        <Fire/>
+                    </div>
+                ):null}
             </td>    
             <td className="goCol">
                 {props.bid.status ? (

@@ -4,19 +4,19 @@
     grid-template-columns: 
       50px //star
       60px //id
-      minmax(150px, 2fr) //date
+      minmax(140px, 1.8fr) //date
       minmax(80px, 1.5fr) //status
       minmax(230px, 4fr) //way
       minmax(120px, 1.6fr) //typeCar
       minmax(50px, 2.2fr) //company
-      110px //bid
+      120px //bid
       minmax(50px, 4.5fr); //btns
     thead, tbody, tr{
       display: contents;
     }
     tr{
       th{
-        padding: 0 15px;
+        // padding: 0 15px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
