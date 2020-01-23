@@ -2,7 +2,7 @@ $c-gray: #8F949B;
 
 tr.BidItem{    
     >td{
-        padding: 0 10px 0 15px;
+        padding: 0 15px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -16,7 +16,7 @@ tr.BidItem{
         justify-content: center;
 
         &:last-child{
-            padding-right: 15px;
+            // padding-right: 15px;
         }
 
         .dateTime{

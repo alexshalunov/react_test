@@ -6,7 +6,7 @@
       60px //id
       minmax(140px, 1.8fr) //date
       minmax(80px, 1.5fr) //status
-      minmax(230px, 4fr) //way
+      minmax(250px, 4.5fr) //way
       minmax(120px, 1.6fr) //typeCar
       minmax(50px, 2.2fr) //company
       120px //bid
@@ -16,7 +16,7 @@
     }
     tr{
       th{
-        // padding: 0 15px;
+        padding: 0 15px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;

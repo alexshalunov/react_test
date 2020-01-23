@@ -36,9 +36,7 @@ const BidItem = props => {
                 </div>
             </td>
             <td className="bidStatus">
-                <span className="ellipses">
-                    {(props.bid.status)? 'Завершен': 'Открыт'}
-                </span>
+                {(props.bid.status)? 'Завершен': 'Открыт'}
             </td>
             <td className="bidWay">
                     <div className="wayStart">{props.bid.cityStart}</div>
