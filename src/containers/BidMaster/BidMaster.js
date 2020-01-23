@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './BidMaster.scss'
 
+import Filter from '../Filter/Filter'
 import BidList from '../../components/BidList'
 
 class BidMaster extends Component{
@@ -39,11 +40,9 @@ class BidMaster extends Component{
             <div className="gridcontainer">
                 <div className="gridtitle">Доступные торги</div>
                 <div className="gridfilter">
-                    <ul className="filters">
-                        <li><button>Все</button></li>
-                        <li><button>Избранные</button></li>
-                        <li><button>Участие</button></li>
-                    </ul>
+                    
+                    <Filter/>
+
                 </div>
                 <div className="gridcontent">
                     <div className="wrap">
@@ -53,8 +52,6 @@ class BidMaster extends Component{
                                 onBidClick = {this.onBidClickHandler}
                             />                        
                         }
-
-        
                     </div>
                 </div>
                 <div className="gridnav">

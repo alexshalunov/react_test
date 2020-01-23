@@ -167,7 +167,7 @@ tr.BidItem{
             }
             .goCol-step{
                 grid-area: step;
-                padding: 0 5px;
+                padding: 1px 5px 0;
                 color: $c-gray;
                 font-size: 11px;
             }
@@ -221,7 +221,11 @@ tr.BidItem{
         cursor: pointer;
         border-radius: 2px;
         width: 100%;
-        line-height: 25px;
+        line-height: 26px;
+        font-weight: 500;
+        font-size: 14px;
+        font-family: 'Roboto';
+        padding: 0;
         &:hover{
             background: #0B9C4C;
             color: #fff;

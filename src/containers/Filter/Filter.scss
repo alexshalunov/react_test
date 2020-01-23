@@ -1,0 +1,40 @@
+$c-border: #8F949B;
+$c-bg: #F8F8F8;
+
+.filters{
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: auto auto auto;
+    li{
+        margin: 0;
+        padding: 0;
+        button{
+            line-height: 36px;
+            border: 1px solid $c-border;
+            border-right: none;
+            cursor: pointer;
+            padding: 0 15px;
+            min-width: 100px;
+            &:focus, &:active{
+                outline: none;
+            }
+            &:hover{
+                background-color: $c-bg;
+            }
+        }
+        &.active button{
+            background-color: $c-bg;
+        }
+        &:first-child{
+            button{
+                border-radius: 2px 0 0 2px;
+            }
+        }
+        &:last-child{
+            button{
+                border-right: 1px solid $c-border;
+                border-radius: 0 2px 2px 0;
+            }
+        }              
+    }       
+}  

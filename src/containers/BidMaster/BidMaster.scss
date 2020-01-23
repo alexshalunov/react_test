@@ -1,6 +1,6 @@
 .gridcontainer{
     display: grid;
-    grid-template-rows: 53px 56px auto 53px;        
+    grid-template-rows: 50px 50px auto 53px;        
     border: 1px solid #D9DFE5;
     border-bottom-style: none;
     border-radius: 4px;
@@ -19,20 +19,18 @@
         padding: 1.3rem;
     }
     .gridfilter{
-        padding: 1.3rem;
+        justify-content: end;
+        align-content: center;
+        display: grid;
+        grid-template-rows: auto;
+        grid-column-gap: 15px;
+        padding: 0 15px;      
     }
     .gridcontent{
         display:grid;
         grid-auto-rows: 0; /* Фича для вертикального скролла внутри грид auto */
         overflow-y: scroll;
     }    
-
-    .filters{
-        float: right;
-        li{
-            float: left;
-        }
-    }
 }
 
 
