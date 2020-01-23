@@ -4,6 +4,7 @@ import './BidItem.scss';
 import Star from '../img/Star'
 import Car from '../img/Car'
 import InfoIco from '../img/Info';
+import Fire from '../img/Fire';
 import Price from './Price'
 
 const BidItem = props => {
@@ -16,10 +17,6 @@ const BidItem = props => {
     return(
         <tr className={clstr}>
             <td>
-                {/* <div className="star"></div> */}
-
-                {/* <Star color="red"/> */}
-
                 {(props.bid.isFavourite)? (
                     <Star color="gold"/>
                 ):(
@@ -66,12 +63,16 @@ const BidItem = props => {
             <td>
                 {props.bid.company}
             </td>
-            <td>
-                <Price price={props.bid.cost}/>
+            <td className="colPrice">
+                <div className="price_cost">
+                    <Price price={props.bid.cost}/>
+                </div>
+                <div className="fireIco">
+                    <Fire/>
+                </div>
             </td>    
             <td className="goCol">
                 {props.bid.status ? (
-
                     props.bid.isWin ? (
                         <div className="goCol-btn">
                             <div>Ваша ставка лучшая</div>

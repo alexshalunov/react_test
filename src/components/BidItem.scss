@@ -109,6 +109,23 @@ tr.BidItem{
                 }
             }
         }
+        &.colPrice{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: 1fr;
+            justify-content: space-between;
+            grid-template-areas: "price fire";
+            grid-column-gap: 5px;
+            >*{
+                align-self:center;
+            }   
+            .price_cost{
+                grid-area: price;
+            }
+            .fireIco{
+                grid-area: fire;
+            }
+        }
         &.aboutCar{
             display: grid;
             grid-template-columns: auto auto;
@@ -205,6 +222,10 @@ tr.BidItem{
         border-radius: 2px;
         width: 100%;
         line-height: 25px;
+        &:hover{
+            background: #0B9C4C;
+            color: #fff;
+        }
     }
 
     .simpleLink{

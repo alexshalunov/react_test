@@ -2,15 +2,15 @@
     display:grid;
     min-width: 100%;
     grid-template-columns: 
-      50px
-      80px 
-      150px 
-      100px
-      minmax(50px, 3fr) 
-      120px
-      minmax(50px, 1.5fr) 
-      minmax(50px, 1.2fr) 
-      minmax(50px, 4fr);
+      50px //star
+      60px //id
+      minmax(150px, 2fr) //date
+      minmax(80px, 1.5fr) //status
+      minmax(230px, 4fr) //way
+      minmax(120px, 1.6fr) //typeCar
+      minmax(50px, 2.2fr) //company
+      110px //bid
+      minmax(50px, 4fr); //btns
     thead, tbody, tr{
       display: contents;
     }

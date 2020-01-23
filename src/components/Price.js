@@ -5,17 +5,15 @@ class Price extends Component{
 
     
     render(){
-
         function divideNumberByPieces(x, delimiter) {
-            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, delimiter || " ");
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, delimiter || " ");
         }
 
         const price = this.props.price
 
         return(
-            <>
-                {/* Разделитель - полупробел */}
-                {divideNumberByPieces(price, ' ')},0 ₽
+            <>                
+                {divideNumberByPieces(price)},0 ₽
             </>
         )
     }
