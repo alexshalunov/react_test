@@ -55,7 +55,7 @@ class BidMaster extends Component{
                     </div>
                 </div>
                 <div className="gridnav">
-                    Навигация
+                    
                 </div>
             </div>
         )
