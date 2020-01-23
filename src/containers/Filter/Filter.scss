@@ -1,5 +1,6 @@
 $c-border: #8F949B;
 $c-bg: #F8F8F8;
+$active-bg: #EFF1F4;
 
 .filters{
     display: grid;
@@ -16,15 +17,16 @@ $c-bg: #F8F8F8;
             cursor: pointer;
             padding: 0 15px;
             min-width: 100px;
+            background-color: $c-bg;
             &:focus, &:active{
                 outline: none;
             }
             &:hover{
-                background-color: $c-bg;
+                background-color: $active-bg;
             }
         }
         &.active button{
-            background-color: $c-bg;
+            background-color: $active-bg;
         }
         &:first-child{
             button{
