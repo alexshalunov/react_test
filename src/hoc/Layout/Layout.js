@@ -1,28 +1,24 @@
-import React, {Component} from 'react'
+import React from 'react'
 import './Layout.scss';
+import LiNavLink from '../../components/LiNavLink/LiNavLink'
 
-class Layout extends Component {
+import Tabs from '../../components/Tabs'
+
+
+class Layout extends React.Component {
     render() {
         return (
             <>
                 <div className="master__nav">
                     Navigation
+                    <ul>
+                        <LiNavLink to='/' exact>Home</LiNavLink>
+                        <LiNavLink to='/bids'>BIDS</LiNavLink>
+                    </ul>
                 </div>        
                 <div className="master__container">
 
-                    <div className="tabs">
-                        <ul className="tabs__list">
-                            <li className="tabs_item">
-                                Home
-                            </li>
-                            <li className="tabs_item">
-                                Общая информация
-                            </li>
-                            <li className="tabs_item active">
-                                Собственные
-                            </li>                    
-                        </ul>
-                    </div>
+                    <Tabs />
 
                     <div className="tabcontainer">
                         { this.props.children }

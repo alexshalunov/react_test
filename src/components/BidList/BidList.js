@@ -1,7 +1,7 @@
 import React from 'react'
 import './BidList.scss';
 
-import BidItem from './BidItem'
+import BidItem from '../BidItem/BidItem'
 
 
 

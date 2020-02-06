@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import './BidMaster.scss'
 
 import Filter from '../Filter/Filter'
-import BidList from '../../components/BidList'
+import BidList from '../../components/BidList/BidList'
 
 class BidMaster extends Component{
 
@@ -39,10 +39,8 @@ class BidMaster extends Component{
         return(
             <div className="gridcontainer">
                 <div className="gridtitle">Доступные торги</div>
-                <div className="gridfilter">
-                    
+                <div className="gridfilter">                    
                     <Filter/>
-
                 </div>
                 <div className="gridcontent">
                     <div className="wrap">
@@ -54,8 +52,7 @@ class BidMaster extends Component{
                         }
                     </div>
                 </div>
-                <div className="gridnav">
-                    
+                <div className="gridnav">                    
                 </div>
             </div>
         )

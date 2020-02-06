@@ -1,11 +1,11 @@
 import React from 'react'
 import './BidItem.scss';
 
-import Star from '../img/Star'
-import Car from '../img/Car'
-import InfoIco from '../img/Info';
-import Fire from '../img/Fire';
-import Price from './Price'
+import Star from '../../img/Star'
+import Car from '../../img/Car'
+import InfoIco from '../../img/Info';
+import Fire from '../../img/Fire';
+import Price from '../Price'
 
 const BidItem = props => {
 
