@@ -8,16 +8,17 @@ import './reset.css';
 import { Provider } from 'react-redux';
 import Layout from './hoc/Layout/Layout'
 import App from './App';
-import Test from './components/TestComponent'
+import TestContainer from './components/TestComponent'
 
 import store from './store/store'
 
 const appRoot = document.getElementById('root');
+
 ReactDOM.render((
     <Provider store={store}>
         <BrowserRouter>
             <Layout>                 
-                <Test/>
+                <TestContainer/>
                 <App/>
             </Layout>
         </BrowserRouter>

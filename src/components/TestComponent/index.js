@@ -1,3 +1,4 @@
+// import React from 'react'
 import Test from './TestComponent'
 
 import { bindActionCreators } from 'redux';
