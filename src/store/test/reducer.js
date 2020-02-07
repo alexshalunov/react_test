@@ -2,13 +2,18 @@ import * as t from './types' //подключили типы экшенов
 
 const initialState = {
     firstName: 'Aleksey',
-    secondName: 'Shalunov'
+    secondName: 'Shalunov',
+    data: {
+        userId: '',
+        id: '',
+        title: 'first Title'
+    }
 }
 
 // http://www.filltext.com/?rows=5&id={index}&firstName={firstName}&secondName={lastName}
 
 const reducer = (state = initialState, action) => {
-    console.log(state)
+    // console.log(state)
     switch (action.type) {
         case t.ACTION_CHANGE_FIRST_NAME:
             return {
@@ -19,6 +24,12 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state, 
                 secondName: action.payload
+            }
+        //Передаем данные в state
+        case t.ACTION_PUT_DATA:
+            return {
+                ...state, 
+                data: action.payload
             }
     }
     return state

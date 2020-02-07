@@ -14,7 +14,7 @@ class App extends React.Component{
     // const dispatch = this.props.dispatch;
     // const { firstName, secondName } = this.props
 
-    console.log('App props: ', this.props)
+    // console.log('App props: ', this.props)
     
     return (
       <Switch>

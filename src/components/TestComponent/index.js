@@ -1,4 +1,3 @@
-// import React from 'react'
 import Test from './TestComponent'
 
 import { bindActionCreators } from 'redux';
@@ -10,6 +9,7 @@ const putStateToProps = (state) => {
     return{
         firstName: state.testUser.firstName,
         secondName: state.testUser.secondName,
+        testTitle: state.testUser.data.title,
     }
 }
 const putActionsToProps = (dispatch) => {

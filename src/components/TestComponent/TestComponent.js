@@ -1,8 +1,9 @@
 import React from 'react';
+import { Connected } from '../Connected'
 
 class Test extends React.Component{
     render(){        
-        const { firstName, secondName, changeFirstName, changeSecondName } = this.props
+        const { firstName, secondName, testTitle, changeFirstName, changeSecondName } = this.props
         // console.log('Test props: ', this.props)      
         return (
             <div>
@@ -23,8 +24,13 @@ class Test extends React.Component{
                     }}
                 />
                 <div>
-                    {firstName} {secondName}
+                    {firstName} {secondName} 
+                    <br/>
+                    <b>{testTitle}</b>
                 </div>
+
+                    <Connected/>
+
             </div>
         );
     }
